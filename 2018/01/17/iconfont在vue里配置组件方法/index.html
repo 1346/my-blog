@@ -79,19 +79,19 @@
 
 
 
-<meta name="description" content="icon在网页里使用的比较多、今天学习到了怎么在Vue里写一个自动化icon的组件 iconfont网站iconfont-阿里巴巴矢量图标库首先要知道这个网站、里面全都是图标、非常多、应该可以满足大多数时候的需求 SvgIcon的组件代码如下：  &amp;lt;template&amp;gt;   &amp;lt;svg :class=&amp;quot;svgClass&amp;quot; aria-hidden=&amp;quot;tru">
+<meta name="description" content="icon在网页里使用的比较多、今天学习到了怎么在Vue里写一个自动化icon的组件 iconfont网站iconfont-阿里巴巴矢量图标库 首先要知道这个网站、里面全都是图标、非常多、应该可以满足大多数时候的需求 SvgIcon的组件代码如下： 1234567891011121314151617181920212223242526272829303132333435363738394041  &amp;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="iconfont在vue里配置组件方法">
 <meta property="og:url" content="https://github.com/1346/my-blog/2018/01/17/iconfont在vue里配置组件方法/index.html">
 <meta property="og:site_name" content="个人博客">
-<meta property="og:description" content="icon在网页里使用的比较多、今天学习到了怎么在Vue里写一个自动化icon的组件 iconfont网站iconfont-阿里巴巴矢量图标库首先要知道这个网站、里面全都是图标、非常多、应该可以满足大多数时候的需求 SvgIcon的组件代码如下：  &amp;lt;template&amp;gt;   &amp;lt;svg :class=&amp;quot;svgClass&amp;quot; aria-hidden=&amp;quot;tru">
+<meta property="og:description" content="icon在网页里使用的比较多、今天学习到了怎么在Vue里写一个自动化icon的组件 iconfont网站iconfont-阿里巴巴矢量图标库 首先要知道这个网站、里面全都是图标、非常多、应该可以满足大多数时候的需求 SvgIcon的组件代码如下： 1234567891011121314151617181920212223242526272829303132333435363738394041  &amp;">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://github.com/1346/my-blog/blob/master/images/icons.png">
-<meta property="og:updated_time" content="2018-01-17T14:42:45.000Z">
+<meta property="og:image" content="https://github.com/1346/my-blog/2018/01/17/iconfont在vue里配置组件方法/icons.png">
+<meta property="og:updated_time" content="2018-01-17T15:21:28.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="iconfont在vue里配置组件方法">
-<meta name="twitter:description" content="icon在网页里使用的比较多、今天学习到了怎么在Vue里写一个自动化icon的组件 iconfont网站iconfont-阿里巴巴矢量图标库首先要知道这个网站、里面全都是图标、非常多、应该可以满足大多数时候的需求 SvgIcon的组件代码如下：  &amp;lt;template&amp;gt;   &amp;lt;svg :class=&amp;quot;svgClass&amp;quot; aria-hidden=&amp;quot;tru">
-<meta name="twitter:image" content="https://github.com/1346/my-blog/blob/master/images/icons.png">
+<meta name="twitter:description" content="icon在网页里使用的比较多、今天学习到了怎么在Vue里写一个自动化icon的组件 iconfont网站iconfont-阿里巴巴矢量图标库 首先要知道这个网站、里面全都是图标、非常多、应该可以满足大多数时候的需求 SvgIcon的组件代码如下： 1234567891011121314151617181920212223242526272829303132333435363738394041  &amp;">
+<meta name="twitter:image" content="https://github.com/1346/my-blog/2018/01/17/iconfont在vue里配置组件方法/icons.png">
 
 
 
@@ -344,52 +344,31 @@
 
       
         <p>icon在网页里使用的比较多、今天学习到了怎么在Vue里写一个自动化icon的组件</p>
-<h3 id="iconfont网站"><a href="#iconfont网站" class="headerlink" title="iconfont网站"></a>iconfont网站</h3><p><a href="https://http://iconfont.cn/" target="_blank" rel="noopener">iconfont-阿里巴巴矢量图标库</a><br>首先要知道这个网站、里面全都是图标、非常多、应该可以满足大多数时候的需求</p>
-<h3 id="SvgIcon的组件"><a href="#SvgIcon的组件" class="headerlink" title="SvgIcon的组件"></a>SvgIcon的组件</h3><p>代码如下： </p>
-<pre><code>&lt;template&gt;
-  &lt;svg :class=&quot;svgClass&quot; aria-hidden=&quot;true&quot;&gt;
-    &lt;use :xlink:href=&quot;iconName&quot;&gt;&lt;/use&gt;
-  &lt;/svg&gt;
-&lt;/template&gt;
-
-&lt;script&gt;
-  export default {
-    name: &apos;svg-icon&apos;,
-    props: {
-      iconClass: {
-        type: String,
-        required: true
-      },
-      className: {
-        type: String
-      }
-    },
-    computed: {
-      iconName() {
-        return `#icon-${this.iconClass}`
-      },
-      svgClass() {
-        if (this.className) {
-          return &apos;svg-icon &apos; + this.className
-        } else {
-          return &apos;svg-icon&apos;
-        }
-      }
-    }
-  }
-&lt;/script&gt;
-
-&lt;style scoped&gt;
-  .svg-icon {
-    width: 1em;
-    height: 1em;
-    vertical-align: -0.15em;
-    fill: currentColor;
-    overflow: hidden;
-  }
-&lt;/style&gt;
-</code></pre><h3 id="icons文件夹"><a href="#icons文件夹" class="headerlink" title="icons文件夹"></a>icons文件夹</h3><p>如下图：<br><img src="https://github.com/1346/my-blog/blob/master/images/icons.png" alt="icons文件夹"></p>
-
+<h3 id="iconfont网站"><a href="#iconfont网站" class="headerlink" title="iconfont网站"></a>iconfont网站</h3><p><a href="https://http://iconfont.cn/" target="_blank" rel="noopener">iconfont-阿里巴巴矢量图标库</a></p>
+<p>首先要知道这个网站、里面全都是图标、非常多、应该可以满足大多数时候的需求</p>
+<h3 id="SvgIcon的组件"><a href="#SvgIcon的组件" class="headerlink" title="SvgIcon的组件"></a>SvgIcon的组件</h3><p>代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">  &lt;svg :class=&quot;svgClass&quot; aria-hidden=&quot;true&quot;&gt;</span><br><span class="line">    &lt;use :xlink:href=&quot;iconName&quot;&gt;&lt;/use&gt;</span><br><span class="line">  &lt;/svg&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">  export default &#123;</span><br><span class="line">    name: &apos;svg-icon&apos;,</span><br><span class="line">    props: &#123;</span><br><span class="line">      iconClass: &#123;</span><br><span class="line">        type: String,</span><br><span class="line">        required: true</span><br><span class="line">      &#125;,</span><br><span class="line">      className: &#123;</span><br><span class="line">        type: String</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    computed: &#123;</span><br><span class="line">      iconName() &#123;</span><br><span class="line">        return `#icon-$&#123;this.iconClass&#125;`</span><br><span class="line">      &#125;,</span><br><span class="line">      svgClass() &#123;</span><br><span class="line">        if (this.className) &#123;</span><br><span class="line">          return &apos;svg-icon &apos; + this.className</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">          return &apos;svg-icon&apos;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;style scoped&gt;</span><br><span class="line">  .svg-icon &#123;</span><br><span class="line">    width: 1em;</span><br><span class="line">    height: 1em;</span><br><span class="line">    vertical-align: -0.15em;</span><br><span class="line">    fill: currentColor;</span><br><span class="line">    overflow: hidden;</span><br><span class="line">  &#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="icons文件夹"><a href="#icons文件夹" class="headerlink" title="icons文件夹"></a>icons文件夹</h3><p>如下图：</p>
+<p><img src="icons.png" alt="icons文件夹"></p>
+<p>svg文件夹是放下载下来的icon的</p>
+<p>index.js文件是配置</p>
+<h3 id="index-js"><a href="#index-js" class="headerlink" title="index.js"></a>index.js</h3><p>代码入下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">import Vue from &apos;vue&apos;</span><br><span class="line">import SvgIcon from &apos;@/components/SvgIcon&apos;// svg组件</span><br><span class="line">import generateIconsView from &apos;../views/IconLib/generateIconsView.js&apos;</span><br><span class="line"></span><br><span class="line">// 全局注册</span><br><span class="line">Vue.component(&apos;svg-icon&apos;, SvgIcon)</span><br><span class="line"></span><br><span class="line">const requireAll = requireContext =&gt; requireContext.keys().map(requireContext)</span><br><span class="line">const req = require.context(&apos;./svg&apos;, false, /\.svg$/)</span><br><span class="line">const iconMap = requireAll(req);</span><br><span class="line"></span><br><span class="line">// 这里是为后面做准备的</span><br><span class="line">generateIconsView.generate(iconMap)</span><br></pre></td></tr></table></figure>
+<h3 id="使用icon"><a href="#使用icon" class="headerlink" title="使用icon"></a>使用icon</h3><ol>
+<li>创建文件夹svg-icon</li>
+<li>在svg-icon里新建index.vue文件</li>
+<li>再新建一个generateIconsView.js文件</li>
+</ol>
+<p>index.vue文件代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line">  &lt;div class=&quot;icons-container&quot;&gt;</span><br><span class="line">    &lt;div class=&quot;icons-wrapper&quot;&gt;</span><br><span class="line">      &lt;div v-for=&quot;item of iconsMap&quot; :key=&quot;item&quot;&gt;</span><br><span class="line">          &lt;div class=&quot;icon-item&quot;&gt;</span><br><span class="line">            &lt;svg-icon :icon-class=&quot;item&quot; /&gt;</span><br><span class="line">            &lt;span&gt;&#123;&#123;item&#125;&#125;&lt;/span&gt;</span><br><span class="line">          &lt;/div&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">import icons from &apos;./generateIconsView&apos;</span><br><span class="line"></span><br><span class="line">export default &#123;</span><br><span class="line">  name: &apos;icons&apos;,</span><br><span class="line">  data() &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">      iconsMap: []</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  mounted() &#123;</span><br><span class="line">    const iconsMap = icons.state.iconsMap.map((i) =&gt; &#123;</span><br><span class="line">      return i.default.id.split(&apos;-&apos;)[1]</span><br><span class="line">    &#125;)</span><br><span class="line">    this.iconsMap = iconsMap</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;style rel=&quot;stylesheet/scss&quot; lang=&quot;scss&quot; scoped&gt;</span><br><span class="line">.icons-container &#123;</span><br><span class="line">  margin: 10px 20px 0;</span><br><span class="line">  overflow: hidden;</span><br><span class="line">  .icons-wrapper &#123;</span><br><span class="line">    margin: 0 auto;</span><br><span class="line">  &#125;</span><br><span class="line">  .icon-item &#123;</span><br><span class="line">    margin: 20px;</span><br><span class="line">    height: 110px;</span><br><span class="line">    text-align: center;</span><br><span class="line">    width: 110px;</span><br><span class="line">    float: left;</span><br><span class="line">    font-size: 30px;</span><br><span class="line">    color: #24292e;</span><br><span class="line">    cursor: pointer;</span><br><span class="line">  &#125;</span><br><span class="line">  span &#123;</span><br><span class="line">    display: block;</span><br><span class="line">    font-size: 24px;</span><br><span class="line">    margin-top: 10px;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+<p>generateIconsView.js文件代码入下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">const data = &#123;</span><br><span class="line">  state: &#123;</span><br><span class="line">    iconsMap: []</span><br><span class="line">  &#125;,</span><br><span class="line">  generate(iconsMap) &#123;</span><br><span class="line">    this.state.iconsMap = iconsMap</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">export default data</span><br></pre></td></tr></table></figure>
+<p>注意：此处的generate函数就是上面icons文件夹下index.js里面写好的函数、在icons/index.js里引入generateIconsView.js、然后写好generate函数、generateIconsView.js再调用</p>
+<h3 id="引入svg-sprite-loader"><a href="#引入svg-sprite-loader" class="headerlink" title="引入svg-sprite-loader"></a>引入svg-sprite-loader</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install svg-sprite-loader --save</span><br></pre></td></tr></table></figure>
+<p>然后在build/webpack.base.conf.js文件里添加代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">//---- 此处新增start ----</span><br><span class="line">&#123;</span><br><span class="line">      test: /\.svg$/,</span><br><span class="line">      loader: &apos;svg-sprite-loader&apos;,</span><br><span class="line">      include: [resolve(&apos;src/icons&apos;)],</span><br><span class="line">      options: &#123;</span><br><span class="line">        symbolId: &apos;icon-[name]&apos;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    //---- 此处新增end ----</span><br><span class="line">    &#123;</span><br><span class="line">      test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,</span><br><span class="line">      loader: &apos;url-loader&apos;,</span><br><span class="line">      </span><br><span class="line">      //---- 此处新增start ----</span><br><span class="line">      exclude: [resolve(&apos;src/icons&apos;)],</span><br><span class="line">      //---- 此处新增end ----</span><br><span class="line">      </span><br><span class="line">      options: &#123;</span><br><span class="line">        limit: 10000,</span><br><span class="line">        name: utils.assetsPath(&apos;img/[name].[hash:7].[ext]&apos;)</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br></pre></td></tr></table></figure>
+<p>至此、就已经大功告成了、可以在页面上愉快的引入各种自己喜欢的icon了</p>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><h3 id="虽然自己慢慢的写出来了、但是大多数还是参照着大神-花裤衩的教程来的、需要多写多练习、不然很容易就忘记了"><a href="#虽然自己慢慢的写出来了、但是大多数还是参照着大神-花裤衩的教程来的、需要多写多练习、不然很容易就忘记了" class="headerlink" title="虽然自己慢慢的写出来了、但是大多数还是参照着大神@花裤衩的教程来的、需要多写多练习、不然很容易就忘记了"></a>虽然自己慢慢的写出来了、但是大多数还是参照着大神@<em>花裤衩</em>的教程来的、需要多写多练习、不然很容易就忘记了</h3><h3 id="最后-大神的教程在这里：手摸手，带你优雅的使用-icon"><a href="#最后-大神的教程在这里：手摸手，带你优雅的使用-icon" class="headerlink" title="最后  大神的教程在这里：手摸手，带你优雅的使用 icon"></a><strong>最后</strong>  大神的教程在这里：<a href="https://segmentfault.com/a/1190000012213278" target="_blank" rel="noopener">手摸手，带你优雅的使用 icon</a></h3>
       
     </div>
     
@@ -558,7 +537,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#iconfont网站"><span class="nav-number">1.</span> <span class="nav-text">iconfont网站</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SvgIcon的组件"><span class="nav-number">2.</span> <span class="nav-text">SvgIcon的组件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#icons文件夹"><span class="nav-number">3.</span> <span class="nav-text">icons文件夹</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#iconfont网站"><span class="nav-number">1.</span> <span class="nav-text">iconfont网站</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SvgIcon的组件"><span class="nav-number">2.</span> <span class="nav-text">SvgIcon的组件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#icons文件夹"><span class="nav-number">3.</span> <span class="nav-text">icons文件夹</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#index-js"><span class="nav-number">4.</span> <span class="nav-text">index.js</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用icon"><span class="nav-number">5.</span> <span class="nav-text">使用icon</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#引入svg-sprite-loader"><span class="nav-number">6.</span> <span class="nav-text">引入svg-sprite-loader</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#结语"><span class="nav-number"></span> <span class="nav-text">结语</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#虽然自己慢慢的写出来了、但是大多数还是参照着大神-花裤衩的教程来的、需要多写多练习、不然很容易就忘记了"><span class="nav-number">1.</span> <span class="nav-text">虽然自己慢慢的写出来了、但是大多数还是参照着大神@花裤衩的教程来的、需要多写多练习、不然很容易就忘记了</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#最后-大神的教程在这里：手摸手，带你优雅的使用-icon"><span class="nav-number">2.</span> <span class="nav-text">最后  大神的教程在这里：手摸手，带你优雅的使用 icon</span></a></li></ol></div>
             
 
           </div>
